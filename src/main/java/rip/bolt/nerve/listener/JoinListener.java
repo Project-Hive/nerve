@@ -13,7 +13,7 @@ import rip.bolt.nerve.utils.BanFormatter;
 
 public class JoinListener implements Listener {
 
-    @EventHandler
+    /**@EventHandler
     public void onPlayerLogin(PostLoginEvent event) {
         List<Punishment> punishments = NervePlugin.getInstance().getAPIManager().getActiveUserPunishments(event.getPlayer().getUniqueId());
         Punishment latestExpiriringBan = null;
@@ -32,6 +32,6 @@ public class JoinListener implements Listener {
         if (latestExpiriringBan != null && latestExpiriringBan.getEndTime() > System.currentTimeMillis() / 1000) { // we shouldn't need to worry about this
             event.getPlayer().disconnect(new TextComponent(BanFormatter.getMessage(latestExpiriringBan)));
         }
-    }
+    }**/
 
 }

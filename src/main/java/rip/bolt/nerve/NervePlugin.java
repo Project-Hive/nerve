@@ -59,14 +59,14 @@ public class NervePlugin extends Plugin {
         appConfig = new ConfigManager(this, "config").get();
         new ConfigManager(this, "template"); // copy template.yml from jar into plugins/Nerve/template.yml
 
-        punishmentCache = new PunishmentCache();
-        apiManager = new APIManager();
-        discordManager = new DiscordManager();
+        //punishmentCache = new PunishmentCache();
+        //apiManager = new APIManager();
+        //discordManager = new DiscordManager();
 
         PrivateServerManager privateServerManager = new PrivateServerManager();
 
-        ProxyServer.getInstance().getPluginManager().registerListener(this, new JoinListener());
-        ProxyServer.getInstance().getPluginManager().registerListener(this, new PrivateServerAddedListener(privateServerManager));
+        //ProxyServer.getInstance().getPluginManager().registerListener(this, new JoinListener());
+        //ProxyServer.getInstance().getPluginManager().registerListener(this, new PrivateServerAddedListener(privateServerManager));
         ProxyServer.getInstance().getScheduler().schedule(this, new NameFetcher(), 1, TimeUnit.DAYS);
 
         ProxyServer.getInstance().registerChannel("FML|HS");
