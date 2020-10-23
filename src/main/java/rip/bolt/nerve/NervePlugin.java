@@ -69,8 +69,8 @@ public class NervePlugin extends Plugin {
         //ProxyServer.getInstance().getPluginManager().registerListener(this, new PrivateServerAddedListener(privateServerManager));
         ProxyServer.getInstance().getScheduler().schedule(this, new NameFetcher(), 1, TimeUnit.DAYS);
 
-        ProxyServer.getInstance().registerChannel("FML|HS");
-        ProxyServer.getInstance().getPluginManager().registerListener(this, new ForgeModListListener());
+        //ProxyServer.getInstance().registerChannel("FML|HS");
+        //ProxyServer.getInstance().getPluginManager().registerListener(this, new ForgeModListListener());
 
         setupCommands();
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new ServerCommand(privateServerManager));

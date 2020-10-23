@@ -29,7 +29,6 @@ public class ReportCommands {
         for (ProxiedPlayer online : reporter.getServer().getInfo().getPlayers()) {
             if (online.hasPermission("nerve.staff")) {
                 online.sendMessage(reportMessage);
-
                 numStaffOnline++;
                 onlineStaff.append(NameUtils.formatNameDiscord(online)).append(", ");
             }
@@ -38,7 +37,7 @@ public class ReportCommands {
         if (onlineStaff.length() >= 2)
             onlineStaff.setLength(onlineStaff.length() - 2);
 
-        NervePlugin.getInstance().getDiscordManager().sendReport(reporter.getServer().getInfo().getName(), NameUtils.formatNameDiscord(reporter), NameUtils.formatNameDiscord(reported), reason, onlineStaff.toString(), numStaffOnline);
+        //NervePlugin.getInstance().getDiscordManager().sendReport(reporter.getServer().getInfo().getName(), NameUtils.formatNameDiscord(reporter), NameUtils.formatNameDiscord(reported), reason, onlineStaff.toString(), numStaffOnline);
         reporter.sendMessage(new TextComponent(ChatColor.GOLD + "Thank you. Your report has been submitted."));
     }
 
